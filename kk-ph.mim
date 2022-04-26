@@ -1,0 +1,98 @@
+;; kk-ph.mim -- Input method for Kazakh Phonetic in Cyrillic script
+;; Copyright (C) 2004, 2005
+;;   National Institute of Advanced Industrial Science and Technology (AIST)
+;;   Registration Number H15PRO112
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Input method for Kazakh Phonetic written in the Cyrillic script.
+;;; Simulating Kazakh Phonetic keyboard.
+;;;
+;;; @image html kk-kbd.png "Keyboard Layout"
+;;; @image latex kk-kbd.eps "Keyboard Layout" width=\narrowwidth
+
+(input-method kk phonetic)
+
+(description
+ "Kazakh Phonetic (Cyrillic) input method simulating the Kazakh keyboard.
+    юЮ  1ү  2Ү  3һ  4Һ  5ғ  6Ғ  7ұ  8Ұ  9қ  0Қ  -_  әӘ
+      яЯ  вВ  еЕ  рР  тТ  иИ  уУ  іІ  оО  пП  шШ  щЩ
+       аА  сС  дД  фФ  гГ  хХ  йЙ  кК  лЛ  ңҢ  өӨ  эЭ|
+        зЗ  ьЬ  цЦ  жЖ  бБ  нН  мМ  ,<  .>  /?
+")
+
+(title "ҚА")
+
+(map
+ (map
+            ("!" ?ү)
+            ("@" ?Ү)
+            ("#" ?һ)
+            ("$" ?Һ)
+            ("%" ?ғ)
+            ("^" ?Ғ)
+            ("&" ?ұ)
+            ("*" ?Ұ)
+            ("("" ?қ)
+            (")"" ?Қ)
+  ("=" ?ә)  ("+" ?Ә)
+  ("`" ?ю)  ("~" ?Ю)
+
+  ("q" ?я)  ("Q" ?Я)
+  ("w" ?в)  ("W" ?В)
+  ("e" ?е)  ("E" ?Е)
+  ("r" ?р)  ("R" ?Р)
+  ("t" ?т)  ("T" ?Т)
+  ("y" ?и)  ("Y" ?И)
+  ("u" ?у)  ("U" ?У)
+  ("i" ?і)  ("I" ?І)
+  ("o" ?о)  ("O" ?О)
+  ("p" ?п)  ("P" ?П)
+  ("[" ?ш)  ("{" ?Ш)
+  ("]" ?щ)  ("}" ?Щ)
+
+  ("a" ?а)  ("A" ?А)
+  ("s" ?с)  ("S" ?С)
+  ("d" ?д)  ("D" ?Д)
+  ("f" ?ф)  ("F" ?Ф)
+  ("g" ?г)  ("G" ?Г)
+  ("h" ?х)  ("H" ?Х)
+  ("j" ?й)  ("J" ?Й)
+  ("k" ?к)  ("K" ?К)
+  ("l" ?л)  ("L" ?Л)
+  (";" ?ң)  (":" ?Ң)
+  ("'" ?ө)  ("\"" ?Ө)
+  ("\\" ?э) ("|" ?Э)
+
+  ("z" ?з)  ("Z" ?З)
+  ("x" ?ь)  ("X" ?Ь)
+  ("c" ?ц)  ("C" ?Ц)
+  ("v" ?ж)  ("V" ?Ж)
+  ("b" ?б)  ("B" ?Б)
+  ("n" ?н)  ("N" ?Н)
+  ("m" ?м)  ("M" ?М)))
+
+(state
+ (init
+  (map)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:
